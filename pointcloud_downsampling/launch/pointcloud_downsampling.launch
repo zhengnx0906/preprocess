@@ -1,0 +1,15 @@
+<launch>
+    <node name="pointcloud_downsampling" pkg="pointcloud_downsampling" type="pointcloud_downsampler" output="screen">
+        <param name="input_topic" value="/livox/lidar" />
+        <param name="output_topic" value="/filtered_point_cloud" />
+        <param name="leaf_size" value="0.1" />
+        <param name="min_x" value="-1.0" />
+        <param name="min_y" value="-1.0" />
+        <param name="min_z" value="-1.0" />
+        <param name="max_x" value="1.0" />
+        <param name="max_y" value="1.0" />
+        <param name="max_z" value="1.0" />
+        <param name="use_different_frame" value="true" />
+        <param name="frameid" value="camera_init" />
+    </node>
+</launch>
